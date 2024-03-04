@@ -1,10 +1,7 @@
 <?php
-
 require_once __DIR__ . "./Models/Production.php";
+require_once __DIR__ . './db.php';
 
-$dune = new Production("Dune", "eng", 8.5);
-$star_wars = new Production("Star Wars", "eng", 6.4);
-var_dump($dune, $star_wars);
 ?>
 
 <!DOCTYPE html>
