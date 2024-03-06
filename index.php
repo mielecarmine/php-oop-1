@@ -16,6 +16,7 @@ require_once __DIR__ . './db.php';
 </head>
 <body>
     <div class="container">
+        <h1>MOVIES</h1>
         <table class="table mt-3">
             <thead>
                 <tr>
@@ -34,6 +35,28 @@ require_once __DIR__ . './db.php';
                     <td><?= $film->vote?></td>
                     <td><?= $film->profits?></td>
                     <td><?= $film->length?></td>
+                </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+        
+        <h1>TV Series</h1>
+        <table class="table mt-3">
+            <thead>
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Language</th>
+                    <th scope="col">Rating</th>
+                    <th scope="col">Seasons</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($tv_series as $tv_serie): ?>
+                <tr>
+                    <td><?= $tv_serie->title?></td>
+                    <td><?= $tv_serie->lang?></td>
+                    <td><?= $tv_serie->vote?></td>
+                    <td><?= $tv_serie->seasons?></td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
