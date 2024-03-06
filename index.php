@@ -1,5 +1,7 @@
 <?php
 require_once __DIR__ . "./Models/Production.php";
+require_once __DIR__ . "./Models/Movie.php";
+require_once __DIR__ . "./Models/TVSerie.php";
 require_once __DIR__ . './db.php';
 
 ?>
@@ -20,6 +22,8 @@ require_once __DIR__ . './db.php';
                     <th scope="col">Title</th>
                     <th scope="col">Language</th>
                     <th scope="col">Rating</th>
+                    <th scope="col">Profits</th>
+                    <th scope="col">Length</th>
                 </tr>
             </thead>
             <tbody>
@@ -28,6 +32,8 @@ require_once __DIR__ . './db.php';
                     <td><?= $film->title?></td>
                     <td><?= $film->lang?></td>
                     <td><?= $film->vote?></td>
+                    <td><?= $film->profits?></td>
+                    <td><?= $film->length?></td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
